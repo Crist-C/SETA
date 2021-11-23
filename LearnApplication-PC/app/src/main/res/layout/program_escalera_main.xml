@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" android:orientation="vertical"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:layout_weight="10">
+
+    <ImageView
+        android:id="@+id/TittleImage"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@color/BlackBackGroud"
+        android:padding="0dp"
+        android:src="@drawable/g4slogo"
+        android:layout_weight="1"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="9">
+
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/MyViewConstraint"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="60dp"
+            android:paddingTop="32dp"
+            android:paddingHorizontal="16dp">
+
+
+            <TextView
+                android:id="@+id/PregTipoEscalera"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="32dp"
+                android:layout_marginTop="32dp"
+                android:text="¿Que tipo de escalera deseas programar?"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+                android:textAlignment="center"
+                android:textSize="20sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+            <RadioGroup
+                android:id="@+id/GroupBtTipoEscalera"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/PregTipoEscalera">
+
+                <RadioButton
+                    android:id="@+id/ButtonTijera"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="50dp"
+                    android:layout_marginLeft="50dp"
+                    android:shadowColor="@color/BlackBackGroud"
+                    android:text="Tijera" />
+
+                <RadioButton
+                    android:id="@+id/ButtonExpansiva"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="50dp"
+                    android:layout_marginLeft="50dp"
+                    android:layout_marginEnd="50dp"
+                    android:layout_marginRight="50dp"
+                    android:layout_weight="1"
+                    android:shadowColor="@color/BlackBackGroud"
+                    android:text="Expansiva" />
+
+
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/PregNumeroPasos"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="32dp"
+                android:layout_marginTop="72dp"
+                android:layout_marginRight="32dp"
+                android:shadowColor="@color/BlackBackGroud"
+                android:text="¿De cuantos pasos la necesitas?"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+                android:textAlignment="center"
+                android:textSize="20sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/GroupBtTipoEscalera" />
+
+            <TextView
+                android:id="@+id/NumeroPasosIndicador"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textAlignment="center"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/PregNumeroPasos" />
+
+            <SeekBar
+                android:id="@+id/BarNpasos"
+                style="@style/Widget.AppCompat.SeekBar.Discrete"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                android:max="13"
+                android:outlineAmbientShadowColor="@color/colorPrimaryDark"
+                android:outlineSpotShadowColor="@color/colorAccent"
+                android:progress="0"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/NumeroPasosIndicador" />
+
+            <TextView
+                android:id="@+id/PregEscogerFecha"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="32dp"
+                android:layout_marginTop="72dp"
+                android:layout_marginRight="32dp"
+                android:shadowColor="@color/BlackBackGroud"
+                android:text="Escoge las fechas"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+                android:textAlignment="center"
+                android:textSize="20sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/BarNpasos" />
+
+            <LinearLayout
+                android:id="@+id/LayoutDesde"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="88dp"
+                android:orientation="horizontal"
+                android:weightSum="2"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/PregEscogerFecha">
+
+                <TextView
+                    android:id="@+id/TVFechaDesde"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="Desde"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+                    android:gravity="center"
+                    android:textSize="20sp"
+                    android:layout_weight="1"/>
+
+                <EditText
+                    android:id="@+id/FechaInitSolicitud"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:maxLength="10"
+                    android:inputType="date"
+                    android:focusable="false"
+                    android:clickable="true"
+                    android:maxLines="1"
+                    android:gravity="center"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/PregEscogerFecha"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/LayoutHasta"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="72dp"
+                android:layout_marginRight="32dp"
+                android:orientation="horizontal"
+                android:weightSum="2"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/LayoutDesde">
+
+            <TextView
+                android:id="@+id/TVFechaHasta"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Hasta"
+                android:gravity="center"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+                android:textSize="20sp"
+                android:layout_weight="1"/>
+
+            <EditText
+                android:id="@+id/FechaEndSolicitud"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:ems="10"
+                android:maxLength="10"
+                android:inputType="date"
+                android:focusable="false"
+                android:clickable="true"
+                android:maxLines="1"
+                android:gravity="center"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/FechaInitSolicitud"/>
+
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/ButtonContSolicitud"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Continuar\n Solicitud"
+                android:textColor="@color/cardview_light_background"
+                android:backgroundTint="@color/ButtonColor"
+                android:paddingHorizontal="72dp"
+                android:layout_marginTop="52dp"
+                android:layout_marginBottom="72dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/LayoutHasta"/>
+
+
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+</LinearLayout>

@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.examplecodes.Seta.ProgramFragments.FragmentEscaleras">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+
+        <ScrollView
+            android:id="@+id/scrollView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:clipToPadding="false"
+            android:fillViewport="true">
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/MyViewConstraint"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="12dp">
+
+
+                <TextView
+                    android:id="@+id/PregTipoEscalera"
+                    style="@style/MyTitleStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="32dp"
+                    android:text="¿Que tipo de escalera necesitas?"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+
+                <TextView
+                    android:id="@+id/PregNumeroPasos"
+                    style="@style/MyTitleStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="32dp"
+                    android:layout_marginTop="32dp"
+                    android:text="¿De cuantos pasos la necesitas?"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/IndTipoEscalera" />
+
+                <TextView
+                    android:id="@+id/NumeroPasosIndicador"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="32dp"
+                    android:layout_marginTop="8dp"
+                    android:gravity="center"
+                    android:text=""
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="@+id/PregNumeroPasos"
+                    app:layout_constraintStart_toStartOf="@+id/PregNumeroPasos"
+                    app:layout_constraintTop_toBottomOf="@+id/PregNumeroPasos" />
+
+                <SeekBar
+                    android:id="@+id/BarNpasos"
+                    style="@style/Widget.AppCompat.SeekBar.Discrete"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="32dp"
+                    android:layout_marginTop="8dp"
+                    android:max="13"
+                    android:progress="0"
+                    android:progressTint="@color/colorPrimary"
+                    android:thumbTint="@color/colorPrimary"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/NumeroPasosIndicador" />
+
+                <androidx.appcompat.widget.AppCompatCheckBox
+                    android:id="@+id/CheckReference"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:buttonTint="@color/colorPrimary"
+                    android:text="Referencia"
+                    app:layout_constraintStart_toStartOf="@+id/BarNpasos"
+                    app:layout_constraintTop_toBottomOf="@+id/BarNpasos" />
+
+                <Spinner
+                    android:id="@+id/spinnerReferences"
+                    android:layout_width="0dp"
+                    android:layout_height="24dp"
+                    android:layout_marginStart="64dp"
+                    android:layout_marginLeft="64dp"
+                    android:gravity="end"
+                    app:layout_constraintBottom_toBottomOf="@+id/CheckReference"
+                    app:layout_constraintEnd_toEndOf="@+id/BarNpasos"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toEndOf="@+id/CheckReference"
+                    app:layout_constraintTop_toTopOf="@+id/CheckReference" />
+
+
+                <Button
+                    android:id="@+id/AnexarASolicitud"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="32dp"
+                    android:layout_marginLeft="32dp"
+                    android:layout_marginEnd="32dp"
+                    android:layout_marginRight="32dp"
+                    android:backgroundTint="@color/ButtonColor"
+                    android:paddingHorizontal="64dp"
+                    android:text="SOLICITAR"
+                    android:textColor="@color/cardview_light_background"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+                <ToggleButton
+                    android:id="@+id/TipoEscaleraButton"
+                    style="@style/EscaleraButtons"
+                    android:layout_width="140dp"
+                    android:layout_height="170dp"
+                    app:layout_constraintEnd_toEndOf="@+id/PregTipoEscalera"
+                    app:layout_constraintStart_toStartOf="@+id/PregTipoEscalera"
+                    app:layout_constraintTop_toBottomOf="@+id/PregTipoEscalera" />
+
+                <TextView
+                    android:id="@+id/IndTipoEscalera"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/MyTitleStyle"
+                    android:text="Tijera"
+                    android:textSize="18sp"
+                    android:textColor="@color/colorPrimary"
+                    app:layout_constraintEnd_toEndOf="@+id/TipoEscaleraButton"
+                    app:layout_constraintStart_toStartOf="@+id/TipoEscaleraButton"
+                    app:layout_constraintTop_toBottomOf="@+id/TipoEscaleraButton" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>|
+
+        </ScrollView>
+
+    </LinearLayout>
+
+
+</FrameLayout>

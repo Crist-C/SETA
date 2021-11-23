@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:weightSum="10.2">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1.2"
+        android:paddingTop="24dp"
+        android:background="@color/colorPrimaryDark"
+        android:orientation="horizontal"
+        android:weightSum="4">
+
+        <ImageButton
+            android:id="@+id/ImageToHome"
+            style="@style/TitleButtonsToHome"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="3"
+            android:gravity="center|left"
+            android:paddingLeft="32dp"
+            android:text="SOLICITUD DE MENSAJERÍA "
+            android:textSize="16sp"
+            android:textColor="@color/cardview_light_background"
+            android:fontFamily="sans-serif"
+            android:textStyle="bold"
+            android:background="@color/colorPrimaryDark"/>
+
+    </LinearLayout>
+
+        <ScrollView
+            android:id="@+id/scrollView"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="9"
+            android:clipToPadding="false"
+            android:fillViewport="true">
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/MyViewConstraint"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="12dp"
+                android:paddingBottom="0dp">
+
+
+                <TextView
+                    android:id="@+id/TittleMoto"
+                    style="@style/TextAppearance.AppCompat.Large"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="32dp"
+                    android:text="Mensajero Motorizado"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+
+                <ToggleButton
+                    android:id="@+id/MotoTB"
+                    android:layout_width="85dp"
+                    android:layout_height="65dp"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginLeft="24dp"
+                    android:background="@drawable/motobutton"
+                    android:checked="true"
+                    android:text=""
+                    android:textOff=""
+                    android:textOn=""
+                    app:layout_constraintBottom_toBottomOf="@+id/textView4"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/textView5" />
+
+                <Spinner
+                    android:id="@+id/SZonaMoto"
+                    android:layout_width="147dp"
+                    android:layout_height="22dp"
+                    android:layout_marginTop="32dp"
+                    android:layout_marginEnd="32dp"
+                    android:layout_marginRight="32dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.971"
+                    app:layout_constraintStart_toEndOf="@+id/textView5"
+                    app:layout_constraintTop_toBottomOf="@+id/TittleMoto" />
+
+                <Spinner
+                    android:id="@+id/SFuncionMoto"
+                    android:layout_width="0dp"
+                    android:layout_height="22dp"
+                    android:layout_marginTop="16dp"
+                    app:layout_constraintEnd_toEndOf="@+id/SZonaMoto"
+                    app:layout_constraintStart_toStartOf="@+id/SZonaMoto"
+                    app:layout_constraintTop_toBottomOf="@+id/SZonaMoto" />
+
+                <TextView
+                    android:id="@+id/textView4"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginLeft="8dp"
+                    android:text="Función"
+                    android:textColor="@color/colorPrimary"
+                    app:layout_constraintBottom_toBottomOf="@+id/SFuncionMoto"
+                    app:layout_constraintStart_toEndOf="@+id/MotoTB"
+                    app:layout_constraintTop_toTopOf="@+id/SFuncionMoto" />
+
+
+                <TextView
+                    android:id="@+id/textView5"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginTop="32dp"
+                    android:text="Zona"
+                    android:textColor="@color/colorPrimary"
+                    app:layout_constraintBottom_toBottomOf="@+id/SZonaMoto"
+                    app:layout_constraintStart_toEndOf="@+id/MotoTB"
+                    app:layout_constraintTop_toTopOf="@+id/SZonaMoto"
+                    app:layout_constraintVertical_bias="1.0" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/textInputLayout"
+                    android:layout_width="0dp"
+                    android:layout_height="55dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="32dp"
+                    android:layout_marginRight="32dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="@+id/MotoTB"
+                    app:layout_constraintTop_toBottomOf="@+id/SFuncionMoto">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/ETObservMoto"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:hint="Observaciones"
+                        android:inputType="text" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <TextView
+                    android:id="@+id/IndCamionCamioneta"
+                    style="@style/TextAppearance.AppCompat.Large"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="32dp"
+                    android:layout_marginTop="32dp"
+                    android:text="Camion - Camioneta"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textInputLayout" />
+
+                <ToggleButton
+                    android:id="@+id/CamionButton"
+                    android:layout_width="85dp"
+                    android:layout_height="65dp"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginLeft="24dp"
+                    android:background="@drawable/camionbutton"
+                    android:scaleX="-1"
+                    android:text=""
+                    android:textOff=""
+                    android:textOn=""
+                    app:layout_constraintBottom_toBottomOf="@+id/FuncionCamionInd"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/SCamionCamioneta" />
+
+                <TextView
+                    android:id="@+id/TipoCamion"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginLeft="8dp"
+                    android:text="Vehículo"
+                    android:textColor="@color/colorPrimary"
+                    app:layout_constraintBottom_toBottomOf="@+id/SCamionCamioneta"
+                    app:layout_constraintStart_toEndOf="@+id/CamionButton"
+                    app:layout_constraintTop_toTopOf="@+id/SCamionCamioneta" />
+
+                <Spinner
+                    android:id="@+id/SCamionCamioneta"
+                    android:layout_width="147dp"
+                    android:layout_height="22dp"
+                    android:layout_marginTop="32dp"
+                    app:layout_constraintEnd_toEndOf="@+id/IndCamionCamioneta"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="@+id/SFuncionMoto"
+                    app:layout_constraintTop_toBottomOf="@+id/IndCamionCamioneta" />
+
+                <TextView
+                    android:id="@+id/FuncionCamionInd"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginLeft="8dp"
+                    android:text="Función"
+                    android:textColor="@color/colorPrimary"
+                    app:layout_constraintBottom_toBottomOf="@+id/FuncionCamionSpinner"
+                    app:layout_constraintStart_toEndOf="@+id/CamionButton"
+                    app:layout_constraintTop_toTopOf="@+id/FuncionCamionSpinner" />
+
+                <Spinner
+                    android:id="@+id/FuncionCamionSpinner"
+                    android:layout_width="0dp"
+                    android:layout_height="22dp"
+                    android:layout_marginTop="16dp"
+                    app:layout_constraintEnd_toEndOf="@+id/SCamionCamioneta"
+                    app:layout_constraintStart_toStartOf="@+id/SCamionCamioneta"
+                    app:layout_constraintTop_toBottomOf="@+id/SCamionCamioneta" />
+
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/textInputLayout2"
+                    android:layout_width="0dp"
+                    android:layout_height="62dp"
+                    android:layout_marginTop="16dp"
+                    app:layout_constraintEnd_toEndOf="@+id/textInputLayout"
+                    app:layout_constraintStart_toStartOf="@+id/CamionButton"
+                    app:layout_constraintTop_toBottomOf="@+id/FuncionCamionSpinner">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/ETObservCarro"
+                        android:layout_width="match_parent"
+                        android:layout_height="44dp"
+                        android:hint="Observaciones"
+                        android:inputType="text" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <Button
+                    android:id="@+id/SolictarMensajeria"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="32dp"
+                    android:layout_marginBottom="64dp"
+                    android:backgroundTint="@color/ButtonColor"
+                    android:paddingHorizontal="64dp"
+                    android:text="SOLICITAR"
+                    android:textColor="@color/cardview_light_background"
+                    android:textSize="16sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textInputLayout2"
+                    app:layout_constraintVertical_bias="1.0" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </ScrollView>
+
+    </LinearLayout>

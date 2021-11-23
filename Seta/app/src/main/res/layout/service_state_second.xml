@@ -1,0 +1,1560 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:weightSum="10">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:paddingTop="24dp"
+        android:background="@color/colorPrimaryDark"
+        android:orientation="horizontal"
+        android:weightSum="4">
+
+        <ImageButton
+            android:id="@+id/ImageToHome"
+            style="@style/TitleButtonsToHome"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="3"
+            android:gravity="center|left"
+            android:paddingLeft="32dp"
+            android:text="GESTIÓN DE SERVICIOS "
+            android:textSize="16sp"
+            android:textColor="@color/cardview_light_background"
+            android:fontFamily="sans-serif"
+            android:textStyle="bold"
+            android:background="@color/colorPrimaryDark"/>
+
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="9">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/textInputLayout25"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColorHint="@color/colorPrimary">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/ViewServiceState"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:enabled="false"
+                    android:hint="Estado actual del servicio"
+                    android:inputType="text"
+                    android:singleLine="true"
+                    android:textColor="@color/colorPrimary" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:id="@+id/TittleOTMSelected"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:enabled="false"
+                android:text="Check List de Equipos"
+                android:textColor="@color/colorPrimary"
+                android:textStyle="bold"
+                android:gravity="center"/>
+
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/CardCheckEscalera"
+                        style="@style/CardViewsInServiceState2">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:paddingBottom="16dp">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:background="@color/colorPrimary">
+
+                                <Button
+                                    android:id="@+id/EscaleraCheckBtn"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="4"
+                                    android:text="Escalera"
+                                    android:textColor="@color/WhiteBackGroud"
+                                    android:paddingLeft="16dp"
+                                    android:gravity="center_vertical|left"
+                                    android:background="@color/colorPrimary"/>
+
+                                <CheckedTextView
+                                    android:id="@+id/EscaleraCB"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:textSize="16sp"
+                                    android:gravity="left|center_vertical"
+                                    android:layout_marginRight="24dp"
+                                    android:checkMark="?android:attr/listChoiceIndicatorMultiple"
+                                    android:checked="false"
+                                    android:checkMarkTint="@color/colorAccent"/>
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/LayoutCardEscalera"
+                                style="@style/LayoutsCardsOptions">
+
+                                <TextView
+                                    android:id="@+id/TittleTextEscalera"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Tijera 7 pasos N.2"
+                                    android:layout_marginHorizontal="16dp"
+                                    android:layout_marginTop="8dp"
+                                    android:textColor="@color/colorPrimary"/>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal"
+                                    android:visibility="visible"
+                                    android:layout_marginHorizontal="16dp">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="match_parent"
+                                        android:text="Estado Físico"
+                                        android:gravity="center"
+                                        android:textColor="@color/colorPrimary"/>
+
+                                    <Spinner
+                                        android:id="@+id/SpinnerEstadoDeEscalera"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:textAlignment="center"
+                                        android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+                                        android:textSize="20sp"
+                                        android:textStyle="bold"
+                                        android:gravity="center"
+                                        android:layout_marginVertical="8dp"/>
+
+                                </LinearLayout>
+
+                                <com.google.android.material.textfield.TextInputLayout
+                                    android:id="@+id/textInputLayout15"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginHorizontal="16dp"
+                                    android:textColorHint="@color/colorPrimary"
+                                    android:visibility="visible"
+                                    app:hintTextColor="@color/colorPrimary">
+
+                                    <com.google.android.material.textfield.TextInputEditText
+                                        android:id="@+id/TextObservacionesEscalera"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:hint="Observación"
+                                        android:inputType="textMultiLine"
+                                        android:textColor="@color/colorPrimary" />
+                                </com.google.android.material.textfield.TextInputLayout>
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/CardCheckAndUnipersonal"
+                        style="@style/CardViewsInServiceState2">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:paddingBottom="16dp">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:background="@color/colorPrimary">
+
+                                <Button
+                                    android:id="@+id/AndUnipersonalCheckBtn"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="4"
+                                    android:text="And.Unipersonal"
+                                    android:textColor="@color/WhiteBackGroud"
+                                    android:paddingLeft="16dp"
+                                    android:gravity="center_vertical|left"
+                                    android:background="@color/colorPrimary"/>
+
+                                <CheckedTextView
+                                    android:id="@+id/AndUnipersonalCB"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:textSize="16sp"
+                                    android:gravity="left|center_vertical"
+                                    android:layout_marginRight="24dp"
+                                    android:checkMark="?android:attr/listChoiceIndicatorMultiple"
+                                    android:checked="false"
+                                    android:checkMarkTint="@color/colorAccent"/>
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/LayoutCardAndUnipersonal"
+                                style="@style/LayoutsCardsOptions">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal"
+                                    android:visibility="visible"
+                                    android:layout_marginHorizontal="16dp">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="match_parent"
+                                        android:text="Estado Físico"
+                                        android:gravity="center"
+                                        android:textColor="@color/colorPrimary"/>
+
+                                    <Spinner
+                                        android:id="@+id/SpinnerEstadoAndUnipersonal"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:textAlignment="center"
+                                        android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+                                        android:textSize="20sp"
+                                        android:textStyle="bold"
+                                        android:gravity="center"
+                                        android:layout_marginVertical="8dp"/>
+
+                                </LinearLayout>
+
+                                <com.google.android.material.textfield.TextInputLayout
+                                    android:id="@+id/textInputLayout33"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginHorizontal="16dp"
+                                    android:textColorHint="@color/colorPrimary"
+                                    android:visibility="visible"
+                                    app:hintTextColor="@color/colorPrimary">
+
+                                    <com.google.android.material.textfield.TextInputEditText
+                                        android:id="@+id/TextObservacionesAndUnipersonal"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:hint="Observación"
+                                        android:inputType="textMultiLine"
+                                        android:textColor="@color/colorPrimary" />
+                                </com.google.android.material.textfield.TextInputLayout>
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/CardCheckAndamio"
+                        style="@style/CardViewsInServiceState2">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:paddingBottom="16dp">
+
+                            <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:background="@color/colorPrimary">
+
+                            <Button
+                                android:id="@+id/AndamioCheckBtn"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="4"
+                                android:text="Andamio"
+                                android:textColor="@color/WhiteBackGroud"
+                                android:paddingLeft="16dp"
+                                android:gravity="center_vertical|left"
+                                android:background="@color/colorPrimary"/>
+
+                            <CheckedTextView
+                                android:id="@+id/AndamioCB"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:textSize="16sp"
+                                android:gravity="left|center_vertical"
+                                android:layout_marginRight="24dp"
+                                android:checkMark="?android:attr/listChoiceIndicatorMultiple"
+                                android:checked="false"
+                                android:checkMarkTint="@color/colorAccent"/>
+
+                        </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/LayoutCardAndamio"
+                                style="@style/LayoutsCardsOptions">
+
+                                <TextView
+                                    android:id="@+id/TittleTextAndamio"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text=" Secciones And.Certificado"
+                                    android:layout_marginHorizontal="16dp"
+                                    android:layout_marginTop="8dp"
+                                    android:textColor="@color/colorPrimary"/>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal"
+                                    android:visibility="visible"
+                                    android:layout_marginHorizontal="16dp">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="match_parent"
+                                        android:text="Estado Físico"
+                                        android:gravity="center"
+                                        android:textColor="@color/colorPrimary"/>
+
+                                    <Spinner
+                                        android:id="@+id/SpinnerEstadoDeAndamio"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:textAlignment="center"
+                                        android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+                                        android:textSize="20sp"
+                                        android:textStyle="bold"
+                                        android:gravity="center"
+                                        android:layout_marginVertical="8dp"/>
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    style="@style/LayoutsCheckbox">
+
+                                    <TextView
+                                        android:text="4"
+                                        style="@style/TextUnidades"/>
+
+
+                                    <CheckedTextView
+                                        android:id="@+id/Vertical_1MCB"
+                                        style="@style/CheckBoxsAndamio"
+                                        android:text="Vertical 1m"/>
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    style="@style/LayoutsCheckbox">
+
+                                    <TextView
+                                        android:text="4"
+                                        style="@style/TextUnidades"/>
+
+                                    <CheckedTextView
+                                    android:id="@+id/Vertical_2MCB"
+                                    style="@style/CheckBoxsAndamio"
+                                    android:text="Vertical 2m"/>
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    style="@style/LayoutsCheckbox">
+
+                                    <TextView
+                                        android:text="4"
+                                        style="@style/TextUnidades"/>
+
+                                    <CheckedTextView
+                                    android:id="@+id/Horizontal_1.4mCB"
+                                    android:text="Horizontal 1.4m"
+                                    style="@style/CheckBoxsAndamio"/>
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    style="@style/LayoutsCheckbox">
+
+                                    <TextView
+                                        android:text="4"
+                                        style="@style/TextUnidades"/>
+
+                                    <CheckedTextView
+                                    android:id="@+id/Diagonal_1.4mCB"
+                                    android:text="Diagonal 1.4m"
+                                    style="@style/CheckBoxsAndamio"/>
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    style="@style/LayoutsCheckbox">
+
+                                    <TextView
+                                        android:text="4"
+                                        style="@style/TextUnidades"/>
+
+                                    <CheckedTextView
+                                    android:id="@+id/RuedasCB"
+                                    android:text="Ruedas"
+                                    style="@style/CheckBoxsAndamio"/>
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    style="@style/LayoutsCheckbox">
+
+                                    <TextView
+                                        android:text="4"
+                                        style="@style/TextUnidades"/>
+
+                                    <CheckedTextView
+                                    android:id="@+id/BaseCollarCB"
+                                    android:text="Base Collar"
+                                    style="@style/CheckBoxsAndamio"/>
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    style="@style/LayoutsCheckbox">
+
+                                    <TextView
+                                        android:text="4"
+                                        style="@style/TextUnidades"/>
+
+
+                                    <CheckedTextView
+                                    android:id="@+id/PasadorVerticalCB"
+                                    android:text="Pasador Vertical"
+                                    style="@style/CheckBoxsAndamio"/>
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    style="@style/LayoutsCheckbox">
+
+                                    <TextView
+                                        android:text="4"
+                                        style="@style/TextUnidades"/>
+
+                                    <CheckedTextView
+                                    android:id="@+id/EscaleraInternaCB"
+                                    android:text="Escalera Interna"
+                                    style="@style/CheckBoxsAndamio"/>
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    style="@style/LayoutsCheckbox">
+
+                                    <TextView
+                                        android:text="4"
+                                        style="@style/TextUnidades"/>
+
+                                    <CheckedTextView
+                                    android:id="@+id/PlataformaPequeñaCB"
+                                    android:text="Plataforma Pequeña"
+                                    style="@style/CheckBoxsAndamio"/>
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    style="@style/LayoutsCheckbox">
+
+                                    <TextView
+                                        android:text="4"
+                                        style="@style/TextUnidades"/>
+
+                                    <CheckedTextView
+                                    android:id="@+id/PlataformaGrandeCB"
+                                    android:text="Plataforma Grande"
+                                    style="@style/CheckBoxsAndamio"/>
+
+                                </LinearLayout>
+
+
+                                <LinearLayout
+                                    style="@style/LayoutsCheckbox">
+
+                                    <TextView
+                                        android:text="4"
+                                        style="@style/TextUnidades"/>
+
+                                    <CheckedTextView
+                                    android:id="@+id/RodapieCB"
+                                    android:text="Rodapie"
+                                    style="@style/CheckBoxsAndamio"/>
+
+                                </LinearLayout>
+
+                                <com.google.android.material.textfield.TextInputLayout
+                                    android:id="@+id/textInputLayout26"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginHorizontal="16dp"
+                                    android:textColorHint="@color/colorPrimary"
+                                    android:visibility="visible"
+                                    app:hintTextColor="@color/colorPrimary">
+
+                                    <com.google.android.material.textfield.TextInputEditText
+                                        android:id="@+id/TextObservacionesAndamio"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:hint="Observación"
+                                        android:inputType="textMultiLine"
+                                        android:textColor="@color/colorPrimary" />
+                                </com.google.android.material.textfield.TextInputLayout>
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/CardCheckEPCC1"
+                        style="@style/CardViewsInServiceState2">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:paddingBottom="16dp">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:background="@color/colorPrimary">
+
+                                <Button
+                                    android:id="@+id/EPCC1CheckBtn"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="4"
+                                    android:text="EPCC 1"
+                                    android:textColor="@color/WhiteBackGroud"
+                                    android:paddingLeft="16dp"
+                                    android:gravity="center_vertical|left"
+                                    android:background="@color/colorPrimary"/>
+
+                                <CheckedTextView
+                                    android:id="@+id/EPCC1CB"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:textSize="16sp"
+                                    android:gravity="left|center_vertical"
+                                    android:layout_marginRight="24dp"
+                                    android:checkMark="?android:attr/listChoiceIndicatorMultiple"
+                                    android:checked="false"
+                                    android:checkMarkTint="@color/colorAccent"/>
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/LayoutCardEPCC1"
+                                style="@style/LayoutsCardsOptions">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal"
+                                    android:visibility="visible"
+                                    android:layout_marginHorizontal="16dp">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="match_parent"
+                                        android:text="Estado Físico"
+                                        android:gravity="center"
+                                        android:textColor="@color/colorPrimary"/>
+
+                                    <Spinner
+                                        android:id="@+id/SpinnerEstadoDeEPCC1"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:textAlignment="center"
+                                        android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+                                        android:textSize="20sp"
+                                        android:textStyle="bold"
+                                        android:gravity="center"
+                                        android:layout_marginVertical="8dp"/>
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    style="@style/LayoutsCheckbox">
+
+                                    <TextView
+                                        android:text="4"
+                                        style="@style/TextUnidades"/>
+
+
+                                    <CheckedTextView
+                                        android:id="@+id/ArnesCB"
+                                        android:text="Arnes"
+                                        style="@style/CheckBoxsAndamio"/>
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    style="@style/LayoutsCheckbox">
+
+                                    <TextView
+                                        android:text="4"
+                                        style="@style/TextUnidades"/>
+
+                                    <CheckedTextView
+                                        android:id="@+id/EslingaPosicionCB"
+                                        style="@style/CheckBoxsAndamio"
+                                        android:text="Esl. Posicion"/>
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    style="@style/LayoutsCheckbox">
+
+                                    <TextView
+                                        android:text="4"
+                                        style="@style/TextUnidades"/>
+
+                                    <CheckedTextView
+                                        android:id="@+id/EslingaEnYCB"
+                                        android:text="Eslinga En Y"
+                                        style="@style/CheckBoxsAndamio"/>
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    style="@style/LayoutsCheckbox">
+
+                                    <TextView
+                                        android:text="4"
+                                        style="@style/TextUnidades"/>
+
+                                    <CheckedTextView
+                                        android:id="@+id/EslingaAbsorbedorCB"
+                                        android:text="Esl. con Absorbedor"
+                                        style="@style/CheckBoxsAndamio"/>
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    style="@style/LayoutsCheckbox">
+
+                                    <TextView
+                                        android:text="4"
+                                        style="@style/TextUnidades"/>
+
+                                    <CheckedTextView
+                                        android:id="@+id/TieOffCB"
+                                        android:text="Tie-Off"
+                                        style="@style/CheckBoxsAndamio"/>
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    style="@style/LayoutsCheckbox">
+
+                                    <TextView
+                                        android:text="4"
+                                        style="@style/TextUnidades"/>
+
+                                    <CheckedTextView
+                                        android:id="@+id/AnilloAnclajeCB"
+                                        android:text="Anillo de Anclaje"
+                                        style="@style/CheckBoxsAndamio"/>
+
+                                </LinearLayout>
+
+
+                                <com.google.android.material.textfield.TextInputLayout
+                                    android:id="@+id/textInputLayout27"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginHorizontal="16dp"
+                                    android:textColorHint="@color/colorPrimary"
+                                    android:visibility="visible"
+                                    app:hintTextColor="@color/colorPrimary">
+
+                                    <com.google.android.material.textfield.TextInputEditText
+                                        android:id="@+id/TextObservacionesEPCC"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:hint="Observación"
+                                        android:inputType="textMultiLine"
+                                        android:textColor="@color/colorPrimary" />
+                                </com.google.android.material.textfield.TextInputLayout>
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/CardCheckEPCC2"
+                        style="@style/CardViewsInServiceState2">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:paddingBottom="16dp">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:background="@color/colorPrimary">
+
+                                <Button
+                                    android:id="@+id/EPCC2CheckBtn"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="4"
+                                    android:text="EPCC 2"
+                                    android:textColor="@color/WhiteBackGroud"
+                                    android:paddingLeft="16dp"
+                                    android:gravity="center_vertical|left"
+                                    android:background="@color/colorPrimary"/>
+
+                                <CheckedTextView
+                                    android:id="@+id/EPCC2CB"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:textSize="16sp"
+                                    android:gravity="left|center_vertical"
+                                    android:layout_marginRight="24dp"
+                                    android:checkMark="?android:attr/listChoiceIndicatorMultiple"
+                                    android:checked="false"
+                                    android:checkMarkTint="@color/colorAccent"/>
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/LayoutCardEPCC2"
+                                style="@style/LayoutsCardsOptions">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal"
+                                    android:visibility="visible"
+                                    android:layout_marginHorizontal="16dp">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="match_parent"
+                                        android:text="Estado Físico"
+                                        android:gravity="center"
+                                        android:textColor="@color/colorPrimary"/>
+
+                                    <Spinner
+                                        android:id="@+id/SpinnerEstadoDeEPCC2"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:textAlignment="center"
+                                        android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+                                        android:textSize="20sp"
+                                        android:textStyle="bold"
+                                        android:gravity="center"
+                                        android:layout_marginVertical="8dp"/>
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    style="@style/LayoutsCheckbox">
+
+                                    <TextView
+                                        android:text="4"
+                                        style="@style/TextUnidades"/>
+
+
+                                    <CheckedTextView
+                                        android:id="@+id/Arnes2CB"
+                                        android:text="Arnes"
+                                        style="@style/CheckBoxsAndamio"/>
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    style="@style/LayoutsCheckbox">
+
+                                    <TextView
+                                        android:text="4"
+                                        style="@style/TextUnidades"/>
+
+                                    <CheckedTextView
+                                        android:id="@+id/EslingaPosicion2CB"
+                                        style="@style/CheckBoxsAndamio"
+                                        android:text="Esl. Posicion"/>
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    style="@style/LayoutsCheckbox">
+
+                                    <TextView
+                                        android:text="4"
+                                        style="@style/TextUnidades"/>
+
+                                    <CheckedTextView
+                                        android:id="@+id/EslingaEnY2CB"
+                                        android:text="Eslinga En Y"
+                                        style="@style/CheckBoxsAndamio"/>
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    style="@style/LayoutsCheckbox">
+
+                                    <TextView
+                                        android:text="4"
+                                        style="@style/TextUnidades"/>
+
+                                    <CheckedTextView
+                                        android:id="@+id/EslingaAbsorbedor2CB"
+                                        android:text="Esl. con Absorbedor"
+                                        style="@style/CheckBoxsAndamio"/>
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    style="@style/LayoutsCheckbox">
+
+                                    <TextView
+                                        android:text="4"
+                                        style="@style/TextUnidades"/>
+
+                                    <CheckedTextView
+                                        android:id="@+id/TieOff2CB"
+                                        android:text="Tie-Off"
+                                        style="@style/CheckBoxsAndamio"/>
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    style="@style/LayoutsCheckbox">
+
+                                    <TextView
+                                        android:text="4"
+                                        style="@style/TextUnidades"/>
+
+                                    <CheckedTextView
+                                        android:id="@+id/AnilloAnclaje2CB"
+                                        android:text="Anillo de Anclaje"
+                                        style="@style/CheckBoxsAndamio"/>
+
+                                </LinearLayout>
+
+                                <com.google.android.material.textfield.TextInputLayout
+                                    android:id="@+id/textInputLayout28"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginHorizontal="16dp"
+                                    android:textColorHint="@color/colorPrimary"
+                                    android:visibility="visible"
+                                    app:hintTextColor="@color/colorPrimary">
+
+                                    <com.google.android.material.textfield.TextInputEditText
+                                        android:id="@+id/TextObservacionesEPCC2"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:hint="Observación"
+                                        android:inputType="textMultiLine"
+                                        android:textColor="@color/colorPrimary" />
+                                </com.google.android.material.textfield.TextInputLayout>
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/CardCheckEPCC3"
+                        style="@style/CardViewsInServiceState2">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:paddingBottom="16dp">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:background="@color/colorPrimary">
+
+                                <Button
+                                    android:id="@+id/EPCC3CheckBtn"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="4"
+                                    android:text="EPCC 3"
+                                    android:textColor="@color/WhiteBackGroud"
+                                    android:paddingLeft="16dp"
+                                    android:gravity="center_vertical|left"
+                                    android:background="@color/colorPrimary"/>
+
+                                <CheckedTextView
+                                    android:id="@+id/EPCC3CB"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:textSize="16sp"
+                                    android:gravity="left|center_vertical"
+                                    android:layout_marginRight="24dp"
+                                    android:checkMark="?android:attr/listChoiceIndicatorMultiple"
+                                    android:checked="false"
+                                    android:checkMarkTint="@color/colorAccent"/>
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/LayoutCardEPCC3"
+                                style="@style/LayoutsCardsOptions">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal"
+                                    android:visibility="visible"
+                                    android:layout_marginHorizontal="16dp">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="match_parent"
+                                        android:text="Estado Físico"
+                                        android:gravity="center"
+                                        android:textColor="@color/colorPrimary"/>
+
+                                    <Spinner
+                                        android:id="@+id/SpinnerEstadoDeEPCC3"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:textAlignment="center"
+                                        android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+                                        android:textSize="20sp"
+                                        android:textStyle="bold"
+                                        android:gravity="center"
+                                        android:layout_marginVertical="8dp"/>
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    style="@style/LayoutsCheckbox">
+
+                                    <TextView
+                                        android:text="4"
+                                        style="@style/TextUnidades"/>
+
+
+                                    <CheckedTextView
+                                        android:id="@+id/Arnes3CB"
+                                        android:text="Arnes"
+                                        style="@style/CheckBoxsAndamio"/>
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    style="@style/LayoutsCheckbox">
+
+                                    <TextView
+                                        android:text="4"
+                                        style="@style/TextUnidades"/>
+
+                                    <CheckedTextView
+                                        android:id="@+id/EslingaPosicion3CB"
+                                        style="@style/CheckBoxsAndamio"
+                                        android:text="Esl. Posicion"/>
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    style="@style/LayoutsCheckbox">
+
+                                    <TextView
+                                        android:text="4"
+                                        style="@style/TextUnidades"/>
+
+                                    <CheckedTextView
+                                        android:id="@+id/EslingaEnY3CB"
+                                        android:text="Eslinga En Y"
+                                        style="@style/CheckBoxsAndamio"/>
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    style="@style/LayoutsCheckbox">
+
+                                    <TextView
+                                        android:text="4"
+                                        style="@style/TextUnidades"/>
+
+                                    <CheckedTextView
+                                        android:id="@+id/EslingaAbsorbedor3CB"
+                                        android:text="Esl. con Absorbedor"
+                                        style="@style/CheckBoxsAndamio"/>
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    style="@style/LayoutsCheckbox">
+
+                                    <TextView
+                                        android:text="4"
+                                        style="@style/TextUnidades"/>
+
+                                    <CheckedTextView
+                                        android:id="@+id/TieOff3CB"
+                                        android:text="Tie-Off"
+                                        style="@style/CheckBoxsAndamio"/>
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    style="@style/LayoutsCheckbox">
+
+                                    <TextView
+                                        android:text="4"
+                                        style="@style/TextUnidades"/>
+
+                                    <CheckedTextView
+                                        android:id="@+id/AnilloAnclaje3CB"
+                                        android:text="Anillo de Anclaje"
+                                        style="@style/CheckBoxsAndamio"/>
+
+                                </LinearLayout>
+
+
+                                <com.google.android.material.textfield.TextInputLayout
+                                    android:id="@+id/textInputLayout29"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginHorizontal="16dp"
+                                    android:textColorHint="@color/colorPrimary"
+                                    android:visibility="visible"
+                                    app:hintTextColor="@color/colorPrimary">
+
+                                    <com.google.android.material.textfield.TextInputEditText
+                                        android:id="@+id/TextObservacionesEPCC3"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:hint="Observación"
+                                        android:inputType="textMultiLine"
+                                        android:textColor="@color/colorPrimary" />
+                                </com.google.android.material.textfield.TextInputLayout>
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/CardCheckEPCC4"
+                        style="@style/CardViewsInServiceState2">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:paddingBottom="16dp">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:background="@color/colorPrimary">
+
+                                <Button
+                                    android:id="@+id/EPCC4CheckBtn"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="4"
+                                    android:text="EPCC 4"
+                                    android:textColor="@color/WhiteBackGroud"
+                                    android:paddingLeft="16dp"
+                                    android:gravity="center_vertical|left"
+                                    android:background="@color/colorPrimary"/>
+
+                                <CheckedTextView
+                                    android:id="@+id/EPCC4CB"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:textSize="16sp"
+                                    android:gravity="left|center_vertical"
+                                    android:layout_marginRight="24dp"
+                                    android:checkMark="?android:attr/listChoiceIndicatorMultiple"
+                                    android:checked="false"
+                                    android:checkMarkTint="@color/colorAccent"/>
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/LayoutCardEPCC4"
+                                style="@style/LayoutsCardsOptions">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal"
+                                    android:visibility="visible"
+                                    android:layout_marginHorizontal="16dp">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="match_parent"
+                                        android:text="Estado Físico"
+                                        android:gravity="center"
+                                        android:textColor="@color/colorPrimary"/>
+
+                                    <Spinner
+                                        android:id="@+id/SpinnerEstadoDeEPCC4"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:textAlignment="center"
+                                        android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+                                        android:textSize="20sp"
+                                        android:textStyle="bold"
+                                        android:gravity="center"
+                                        android:layout_marginVertical="8dp"/>
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    style="@style/LayoutsCheckbox">
+
+                                    <TextView
+                                        android:text="4"
+                                        style="@style/TextUnidades"/>
+
+
+                                    <CheckedTextView
+                                        android:id="@+id/Arnes4CB"
+                                        android:text="Arnes"
+                                        style="@style/CheckBoxsAndamio"/>
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    style="@style/LayoutsCheckbox">
+
+                                    <TextView
+                                        android:text="4"
+                                        style="@style/TextUnidades"/>
+
+                                    <CheckedTextView
+                                        android:id="@+id/EslingaPosicion4CB"
+                                        style="@style/CheckBoxsAndamio"
+                                        android:text="Esl. Posicion"/>
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    style="@style/LayoutsCheckbox">
+
+                                    <TextView
+                                        android:text="4"
+                                        style="@style/TextUnidades"/>
+
+                                    <CheckedTextView
+                                        android:id="@+id/EslingaEnY4CB"
+                                        android:text="Eslinga En Y"
+                                        style="@style/CheckBoxsAndamio"/>
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    style="@style/LayoutsCheckbox">
+
+                                    <TextView
+                                        android:text="4"
+                                        style="@style/TextUnidades"/>
+
+                                    <CheckedTextView
+                                        android:id="@+id/EslingaAbsorbedor4CB"
+                                        android:text="Esl. con Absorbedor"
+                                        style="@style/CheckBoxsAndamio"/>
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    style="@style/LayoutsCheckbox">
+
+                                    <TextView
+                                        android:text="4"
+                                        style="@style/TextUnidades"/>
+
+                                    <CheckedTextView
+                                        android:id="@+id/TieOff4CB"
+                                        android:text="Tie-Off"
+                                        style="@style/CheckBoxsAndamio"/>
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    style="@style/LayoutsCheckbox">
+
+                                    <TextView
+                                        android:text="4"
+                                        style="@style/TextUnidades"/>
+
+                                    <CheckedTextView
+                                        android:id="@+id/AnilloAnclaje4CB"
+                                        android:text="Anillo de Anclaje"
+                                        style="@style/CheckBoxsAndamio"/>
+
+                                </LinearLayout>
+
+
+                                <com.google.android.material.textfield.TextInputLayout
+                                    android:id="@+id/textInputLayout30"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginHorizontal="16dp"
+                                    android:textColorHint="@color/colorPrimary"
+                                    android:visibility="visible"
+                                    app:hintTextColor="@color/colorPrimary">
+
+                                    <com.google.android.material.textfield.TextInputEditText
+                                        android:id="@+id/TextObservacionesEPCC4"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:hint="Observación"
+                                        android:inputType="textMultiLine"
+                                        android:textColor="@color/colorPrimary" />
+                                </com.google.android.material.textfield.TextInputLayout>
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/CardCheckExtras"
+                        style="@style/CardViewsInServiceState2">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:paddingBottom="16dp">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:background="@color/colorPrimary">
+
+                                <Button
+                                    android:id="@+id/ExtrasCheckBtn"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="4"
+                                    android:text="Extras"
+                                    android:textColor="@color/WhiteBackGroud"
+                                    android:paddingLeft="16dp"
+                                    android:gravity="center_vertical|left"
+                                    android:background="@color/colorPrimary"/>
+
+                                <CheckedTextView
+                                    android:id="@+id/ExtrasCB"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:textSize="16sp"
+                                    android:gravity="left|center_vertical"
+                                    android:layout_marginRight="24dp"
+                                    android:checkMark="?android:attr/listChoiceIndicatorMultiple"
+                                    android:checked="false"
+                                    android:checkMarkTint="@color/colorAccent"/>
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/LayoutCardExtras"
+                                style="@style/LayoutsCardsOptions">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal"
+                                    android:visibility="visible"
+                                    android:layout_marginHorizontal="16dp">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="match_parent"
+                                        android:text="Estado Físico"
+                                        android:gravity="center"
+                                        android:textColor="@color/colorPrimary"/>
+
+                                    <Spinner
+                                        android:id="@+id/SpinnerEstadoDeExtras"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:textAlignment="center"
+                                        android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+                                        android:textSize="20sp"
+                                        android:textStyle="bold"
+                                        android:gravity="center"
+                                        android:layout_marginVertical="8dp"/>
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    style="@style/LayoutsCheckbox">
+
+                                    <TextView
+                                        android:text="4"
+                                        style="@style/TextUnidades"/>
+
+
+                                    <CheckedTextView
+                                        android:id="@+id/EqAscDescensoCB"
+                                        android:text="Eq. Asc/Descenso"
+                                        style="@style/CheckBoxsAndamio"/>
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    style="@style/LayoutsCheckbox">
+
+                                    <TextView
+                                        android:text="4"
+                                        style="@style/TextUnidades"/>
+
+                                    <CheckedTextView
+                                        android:id="@+id/CuerdaCB"
+                                        style="@style/CheckBoxsAndamio"
+                                        android:text="Cuerda"/>
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    style="@style/LayoutsCheckbox">
+
+                                    <TextView
+                                        android:text="4"
+                                        style="@style/TextUnidades"/>
+
+                                    <CheckedTextView
+                                        android:id="@+id/SeñalizacionCB"
+                                        android:text="Cono - Cinta"
+                                        style="@style/CheckBoxsAndamio"/>
+
+                                </LinearLayout>
+
+                                <com.google.android.material.textfield.TextInputLayout
+                                    android:id="@+id/textInputLayout31"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginHorizontal="16dp"
+                                    android:textColorHint="@color/colorPrimary"
+                                    android:visibility="visible"
+                                    app:hintTextColor="@color/colorPrimary">
+
+                                    <com.google.android.material.textfield.TextInputEditText
+                                        android:id="@+id/TextObservacionesExtras"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:hint="Observación"
+                                        android:inputType="textMultiLine"
+                                        android:textColor="@color/colorPrimary" />
+                                </com.google.android.material.textfield.TextInputLayout>
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/CardCheckHSE"
+                        style="@style/CardViewsInServiceState2">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:paddingBottom="16dp">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:background="@color/colorPrimary">
+
+                                <Button
+                                    android:id="@+id/HSECheckBtn"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="4"
+                                    android:text="HSE"
+                                    android:textColor="@color/WhiteBackGroud"
+                                    android:paddingLeft="16dp"
+                                    android:gravity="center_vertical|left"
+                                    android:background="@color/colorPrimary"/>
+
+                                <CheckedTextView
+                                    android:id="@+id/HSECB"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:textSize="16sp"
+                                    android:gravity="left|center_vertical"
+                                    android:layout_marginRight="24dp"
+                                    android:checkMark="?android:attr/listChoiceIndicatorMultiple"
+                                    android:checked="false"
+                                    android:checkMarkTint="@color/colorAccent"/>
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/LayoutCardHSE"
+                                style="@style/LayoutsCardsOptions">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal"
+                                    android:visibility="visible"
+                                    android:layout_marginHorizontal="16dp">
+
+
+                                </LinearLayout>
+
+                                <com.google.android.material.textfield.TextInputLayout
+                                    android:id="@+id/textInputLayout32"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginHorizontal="16dp"
+                                    android:textColorHint="@color/colorPrimary"
+                                    android:visibility="visible"
+                                    app:hintTextColor="@color/colorPrimary">
+
+                                    <com.google.android.material.textfield.TextInputEditText
+                                        android:id="@+id/TextObservacionesHSE"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:hint="Observación"
+                                        android:inputType="textMultiLine"
+                                        android:textColor="@color/colorPrimary" />
+                                </com.google.android.material.textfield.TextInputLayout>
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+
+
+                </LinearLayout>
+
+            </ScrollView>
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Elige el nuevo estado"
+                android:textColor="@color/colorPrimary"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:gravity="bottom"
+                android:layout_marginTop="16dp"/>
+
+            <Spinner
+                android:id="@+id/SpinerState"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:gravity="center"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Codigo de Confirmación"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:gravity="bottom"/>
+
+
+            <EditText
+                android:id="@+id/ViewAccesCode"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="8dp"
+                android:textAlignment="center"
+                android:inputType="number"
+                android:textSize="16sp"
+                android:maxLength="6"/>
+
+            <Button
+                android:id="@+id/ButtChangeState"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/ButtonColor"
+                android:layout_marginBottom="32dp"
+                android:text="Cambiar estado"
+                android:textSize="16sp"
+                android:textColor="@color/cardview_light_background"
+                android:gravity="center"
+                />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>
+

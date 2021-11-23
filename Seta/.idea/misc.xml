@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Users/crist/Documents/Apps/LearnApplication-PC/app/src/main/res/layout/login.xml" value="0.324537037037037" />
+        <entry key="..\:/Users/crist/Documents/Apps/SETA/LearnApplication-PC/app/src/main/res/layout/consulta_escalera.xml" value="0.225" />
+        <entry key="..\:/Users/crist/Documents/Apps/SETA/LearnApplication-PC/app/src/main/res/layout/fragment_andamios.xml" value="0.1814814814814815" />
+        <entry key="..\:/Users/crist/Documents/Apps/SETA/LearnApplication-PC/app/src/main/res/layout/fragment_dia_servicio_programado.xml" value="0.1814814814814815" />
+        <entry key="..\:/Users/crist/Documents/Apps/SETA/LearnApplication-PC/app/src/main/res/layout/fragment_e_q_altura.xml" value="0.1814814814814815" />
+        <entry key="..\:/Users/crist/Documents/Apps/SETA/LearnApplication-PC/app/src/main/res/layout/fragment_servicio.xml" value="0.324537037037037" />
+        <entry key="..\:/Users/crist/Documents/Apps/SETA/LearnApplication-PC/app/src/main/res/layout/generate_rute.xml" value="0.324537037037037" />
+        <entry key="..\:/Users/crist/Documents/Apps/SETA/LearnApplication-PC/app/src/main/res/layout/new_solicitud.xml" value="0.225" />
+        <entry key="..\:/Users/crist/Documents/Apps/SETA/Seta/app/src/main/res/layout/main_menu.xml" value="0.225" />
+        <entry key="..\:/Users/crist/Documents/Apps/SETA/Seta/app/src/main/res/layout/main_menu_hse.xml" value="0.225" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="1.8" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>

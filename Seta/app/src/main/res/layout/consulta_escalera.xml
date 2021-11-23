@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:weightSum="10">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@color/colorPrimaryDark"
+        android:orientation="horizontal"
+        android:weightSum="4">
+
+        <ImageButton
+            android:id="@+id/ImageToHome"
+            style="@style/TitleButtonsToHome"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="3"
+            android:gravity="center|left"
+            android:paddingLeft="32dp"
+            android:text="CONSULTAR "
+            android:textSize="16sp"
+            android:textColor="@color/cardview_light_background"
+            android:fontFamily="sans-serif"
+            android:textStyle="bold"
+            android:background="@color/colorPrimaryDark"/>
+
+    </LinearLayout>
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="0sp"
+        android:background="@drawable/mybackgroud"
+        android:layout_weight="9">
+
+        <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="32dp">
+
+
+            <TextView
+                android:text="¿ Que tipo de escalera vas a consultar ?"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                android:layout_marginTop="32dp"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+                android:textSize="22sp"
+                android:gravity="center"/>
+
+            <RadioGroup
+                android:id="@+id/GroupBtTipoEscalera"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="14sp"
+                android:weightSum="2"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/ButtonExpansiva"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="Expansiva"
+                    android:textSize="16sp"/>
+
+                <RadioButton
+                    android:id="@+id/ButtonTijera"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="Tijera"
+                    android:textSize="16sp"/>
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/PregNumeroPasos"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="60dp"
+                android:text="¿ De cuantos pasos ?"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+                android:textSize="22sp"
+                android:gravity="center"/>
+
+            <TextView
+                android:id="@+id/NumeroPasosIndicador"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textStyle="bold"
+                android:textAlignment="center"
+                android:textSize="16sp"/>
+
+            <SeekBar
+                android:id="@+id/BarNpasos"
+                style="@style/Widget.AppCompat.SeekBar.Discrete"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="14dp"
+                android:min="3"
+                android:max="16"
+                android:progress="1"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:weightSum="2"
+                android:orientation="horizontal">
+
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="Numero"
+                    android:textSize="16sp"
+                    android:gravity="center"/>
+
+                <Spinner
+                    android:id="@+id/SpinNumeroEsc"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    style="@style/Animation.Design.BottomSheetDialog"
+                    android:gravity="center"/>
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/PregEscogerFecha"
+                android:text="¿ Entre cuales fecha ?"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="60dp"
+                android:textAlignment="center"
+                android:textSize="22sp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:layout_marginTop="@dimen/TopMargin"
+                android:orientation="horizontal"
+                android:paddingHorizontal="32dp"
+                android:weightSum="2">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="bottom"
+                    android:text="Desde"
+                    android:textAlignment="center"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="bottom"
+                    android:text="Hasta"
+                    android:textAlignment="center"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="2"
+                android:layout_marginBottom="@dimen/TopMargin"
+                android:orientation="horizontal"
+                android:paddingHorizontal="32dp"
+                android:weightSum="2">
+
+                <EditText
+                    android:id="@+id/consFechaDesde"
+                    android:hint="AAAA-MM-DD"
+                    android:textSize="16sp"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:layout_marginRight="8dp"
+                    android:maxLength="10"
+                    android:focusable="false"
+                    android:clickable="true"
+                    android:textAlignment="center"/>
+
+                <EditText
+                    android:id="@+id/consFechaHasta"
+                    android:hint="AAAA-MM-DD"
+                    android:textSize="16sp"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:layout_marginLeft="8dp"
+                    android:maxLength="10"
+                    android:focusable="false"
+                    android:clickable="true"
+                    android:textAlignment="center"/>
+
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:weightSum="2"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/conDisponibilidad"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Disponibilidad"
+                    android:textSize="16sp"
+                    android:textColor="@color/cardview_light_background"
+                    android:backgroundTint="@color/ButtonColor"/>
+
+                <Button
+                    android:id="@+id/conRuta"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Ruta"
+                    android:textSize="16sp"
+                    android:textColor="@color/cardview_light_background"
+                    android:backgroundTint="@color/ButtonColor"/>
+
+            </LinearLayout>
+
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

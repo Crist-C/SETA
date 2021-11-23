@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="silencedaemon.Seta.Servicios.NewSolicitud"
+    android:orientation="vertical"
+    android:weightSum="10.5">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:paddingTop="32dp"
+        android:background="@color/colorPrimaryDark"
+        android:orientation="horizontal"
+        android:weightSum="4">
+
+    <ImageButton
+        android:id="@+id/ImageToHome"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:background="@drawable/logoseta_inv"
+        android:layout_weight="1"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="3"
+            android:gravity="center|left"
+            android:paddingLeft="32dp"
+            android:text="NUEVA SOLICITUD "
+            android:textSize="16sp"
+            android:textColor="@color/cardview_light_background"
+            android:fontFamily="sans-serif"
+            android:textStyle="bold"
+            android:background="@color/colorPrimaryDark"/>
+
+    </LinearLayout>
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/EquiposTabLayout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.8"
+        android:background="@color/colorPrimaryDark"
+        app:tabIndicatorColor="@color/colorAccent"
+        app:tabRippleColor="@color/cardview_light_background"
+        app:tabSelectedTextColor="@color/colorAccent"
+        app:tabIconTint="@color/cardview_light_background"
+        app:tabIconTintMode="multiply"
+        app:tabTextColor="@color/cardview_light_background">
+
+        <com.google.android.material.tabs.TabItem
+            android:id="@+id/TabEscalera"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:icon="@drawable/icon_escaleras4"
+            android:text="ESCALERA"/>
+
+        <com.google.android.material.tabs.TabItem
+            android:id="@+id/TabAndamio"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:icon="@drawable/icon_andamio4"
+            android:text="ANDAMIO" />
+
+        <com.google.android.material.tabs.TabItem
+            android:id="@+id/TabEQAltura"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:icon="@drawable/casco_2"
+            android:text="ETSA" />
+
+
+    </com.google.android.material.tabs.TabLayout>
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/TabsViewPager"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight="7.3" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="horizontal"
+        android:layout_weight="0.7"
+        android:weightSum="2">
+
+    <EditText
+        android:id="@+id/FechaInitSolicitud1"
+        android:hint="DESDE"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:clickable="true"
+        android:focusable="false"
+        android:gravity="center"
+        android:inputType="date"
+        android:maxLength="10"
+        android:maxLines="1"/>
+
+    <EditText
+        android:id="@+id/FechaEndSolicitud2"
+        android:hint="HASTA"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:clickable="true"
+        android:focusable="false"
+        android:gravity="center"
+        android:inputType="date"
+        android:maxLength="10"
+        android:maxLines="1"/>
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/ButtContinuarSolicitud"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.7"
+        android:layout_marginBottom="48dp"
+        android:text="Continuar Solicitud"
+        android:textColor="@color/cardview_light_background"
+        android:backgroundTint="@color/ButtonColor"/>
+
+
+</LinearLayout>

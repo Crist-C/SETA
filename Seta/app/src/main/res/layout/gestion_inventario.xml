@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:weightSum="10">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:paddingTop="24dp"
+        android:background="@color/colorPrimaryDark"
+        android:orientation="horizontal"
+        android:weightSum="4">
+
+        <ImageButton
+            android:id="@+id/ImageToHomeGI"
+            style="@style/TitleButtonsToHome"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="3"
+            android:gravity="center|left"
+            android:paddingLeft="32dp"
+            android:text="GESTION DE INVENTARIO "
+            android:textSize="16sp"
+            android:textColor="@color/cardview_light_background"
+            android:fontFamily="sans-serif"
+            android:textStyle="bold"
+            android:background="@color/colorPrimaryDark"/>
+
+    </LinearLayout>
+
+            <ListView
+                android:id="@+id/InventariOptionsList"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="9">
+            </ListView>
+
+</LinearLayout>

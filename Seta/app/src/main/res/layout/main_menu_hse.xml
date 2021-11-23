@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <LinearLayout  xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_weight="10">
+
+
+    <ImageView
+        android:id="@+id/TittleImage"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@color/BlackBackGroud"
+        android:src="@drawable/g4slogo"
+        android:layout_weight="1"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="9">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/MyViewConstraint2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="16dp"
+            android:paddingVertical="32dp">
+
+            <TextView
+                android:id="@+id/TextTittle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="30sp"
+                android:layout_marginTop="32dp"
+                android:text="¿Que deseas hacer?"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+                android:textSize="24sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/MyViewConstraint2" />
+
+
+            <TextView
+                android:id="@+id/TextConsultas"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="30sp"
+                android:layout_marginStart="12dp"
+                android:layout_marginLeft="12dp"
+                android:text="Consultas"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="@+id/IconConsultas"
+                app:layout_constraintHorizontal_bias="0.44"
+                app:layout_constraintStart_toStartOf="@+id/IconConsultas"
+                app:layout_constraintTop_toBottomOf="@+id/IconConsultas" />
+
+            <Button
+                android:id="@+id/IconQR"
+                android:layout_width="180dp"
+                android:layout_height="180dp"
+                android:layout_gravity="bottom"
+                android:layout_marginTop="32dp"
+                android:background="@color/cardview_light_background"
+                android:drawableLeft="@drawable/qrcode_180x180"
+                android:scaleX="0.7"
+                android:scaleY="0.7"
+                app:layout_constraintEnd_toEndOf="@+id/IconConsInventario"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="@+id/IconConsInventario"
+                app:layout_constraintTop_toBottomOf="@+id/TextConsInventario" />
+
+            <Button
+                android:id="@+id/IconConsultas"
+                android:layout_width="180dp"
+                android:layout_height="180dp"
+                android:layout_gravity="top"
+                android:layout_marginTop="32dp"
+                android:background="@color/cardview_light_background"
+                android:drawableLeft="@drawable/conocerdisponibilidad2"
+                android:scaleX="0.7"
+                android:scaleY="0.7"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.04"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/TextTittle" />
+
+            <Button
+                android:id="@+id/IconConsInventario"
+                android:layout_width="180dp"
+                android:layout_height="180dp"
+                android:layout_gravity="bottom"
+                android:layout_marginTop="32dp"
+                android:background="@android:color/background_light"
+                android:drawableRight="@drawable/inventarioescaleras150x128"
+                android:paddingHorizontal="16dp"
+                android:scaleX="0.7"
+                android:scaleY="0.7"
+                app:layout_constraintEnd_toEndOf="@+id/IconConsultas"
+                app:layout_constraintStart_toStartOf="@+id/IconConsultas"
+                app:layout_constraintTop_toBottomOf="@id/TextConsultas" />
+
+            <TextView
+                android:id="@+id/TextGestión"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="30sp"
+                android:layout_marginTop="0dp"
+                android:text="Gestión de Inventario"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="@+id/IconProgEscalera"
+                app:layout_constraintStart_toStartOf="@+id/IconProgEscalera"
+                app:layout_constraintTop_toBottomOf="@id/IconProgEscalera" />
+
+
+            <Button
+                android:id="@+id/IconProgEscalera"
+                android:layout_width="180dp"
+                android:layout_height="180dp"
+                android:layout_gravity="bottom"
+                android:background="@color/cardview_light_background"
+                android:drawableRight="@drawable/calendario103x128"
+                android:paddingHorizontal="38dp"
+                android:scaleX="0.7"
+                android:scaleY="0.7"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.96"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/IconConsultas" />
+
+            <TextView
+                android:id="@+id/TextConsInventario"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="30sp"
+                android:layout_marginStart="4dp"
+                android:layout_marginLeft="4dp"
+                android:layout_marginTop="0sp"
+                android:text="inventario"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="@+id/IconConsInventario"
+                app:layout_constraintStart_toStartOf="@+id/IconConsInventario"
+                app:layout_constraintTop_toBottomOf="@+id/IconConsInventario" />
+
+            <TextView
+                android:id="@+id/TextCancelarProg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="30sp"
+                android:text="QR read"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="@+id/IconQR"
+                app:layout_constraintStart_toStartOf="@+id/IconQR"
+                app:layout_constraintTop_toBottomOf="@id/IconQR" />
+
+
+            <Button
+                android:id="@+id/IconActEstado"
+                android:layout_width="180dp"
+                android:layout_height="180dp"
+                android:layout_gravity="center"
+                android:background="@color/cardview_light_background"
+                android:drawableLeft="@drawable/actualizarestado5"
+                android:drawableTint="@color/cardview_shadow_end_color"
+                android:drawableTintMode="src_over"
+                android:paddingHorizontal="28dp"
+                android:scaleX="0.7"
+                android:scaleY="0.7"
+                app:layout_constraintEnd_toEndOf="@+id/IconProgEscalera"
+                app:layout_constraintStart_toStartOf="@+id/IconProgEscalera"
+                app:layout_constraintTop_toTopOf="@+id/IconConsInventario" />
+
+            <TextView
+                android:id="@+id/TextActEstado"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="30sp"
+                android:layout_marginTop="0dp"
+                android:text="Gestión de servicios"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="@+id/IconActEstado"
+                app:layout_constraintStart_toStartOf="@+id/IconActEstado"
+                app:layout_constraintTop_toBottomOf="@id/IconActEstado" />
+
+            <Button
+                android:id="@+id/IconGenerarRuta"
+                android:layout_width="180dp"
+                android:layout_height="180dp"
+                android:background="@color/cardview_light_background"
+                android:drawableLeft="@drawable/generarruta2"
+                android:gravity="center_horizontal"
+                android:hapticFeedbackEnabled="true"
+                android:paddingHorizontal="16dp"
+                android:scaleX="0.7"
+                android:scaleY="0.7"
+                app:layout_constraintEnd_toEndOf="@+id/IconActEstado"
+                app:layout_constraintStart_toStartOf="@+id/IconActEstado"
+                app:layout_constraintTop_toTopOf="@+id/IconQR" />
+
+            <TextView
+                android:id="@+id/TextGenerarRuta"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="30sp"
+                android:layout_marginTop="0dp"
+                android:text="Ruta"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="@+id/IconGenerarRuta"
+                app:layout_constraintStart_toStartOf="@+id/IconGenerarRuta"
+                app:layout_constraintTop_toBottomOf="@+id/IconGenerarRuta" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+</LinearLayout>
+

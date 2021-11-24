@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/SETA.iml" filepath="$PROJECT_DIR$/.idea/modules/SETA.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/SETA.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/SETA.app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/seta.iml" filepath="$PROJECT_DIR$/.idea/modules/seta.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/seta.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/seta.app.iml" />
     </modules>
   </component>
 </project>

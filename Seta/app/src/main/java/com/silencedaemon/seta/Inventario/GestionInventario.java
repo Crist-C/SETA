@@ -10,7 +10,7 @@ import android.widget.ImageButton;
 import android.widget.ListView;
 import android.widget.Toast;
 
-import com.silencedaemon.seta.MainMenus.MainMenuActivity;
+import com.silencedaemon.seta.MainMenus.MainMenu.vista.MainMenuActivity;
 import com.silencedaemon.seta.R;
 
 import java.util.ArrayList;

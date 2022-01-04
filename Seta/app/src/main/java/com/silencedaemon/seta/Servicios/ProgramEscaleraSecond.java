@@ -30,7 +30,7 @@ import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 import com.silencedaemon.seta.Funciones.DataBase;
 import com.silencedaemon.seta.Funciones.DataModel;
-import com.silencedaemon.seta.MainMenus.MainMenuActivity;
+import com.silencedaemon.seta.MainMenus.MainMenu.vista.MainMenuActivity;
 import com.silencedaemon.seta.ProgramFragments.InterfazActivityFragment;
 import com.silencedaemon.seta.R;
 

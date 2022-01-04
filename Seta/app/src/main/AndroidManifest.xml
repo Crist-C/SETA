@@ -32,6 +32,11 @@
             android:screenOrientation="portrait"
             android:exported="true"
             tools:ignore="LockedOrientationActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
         <activity android:name="com.silencedaemon.seta.Rutas.ListOfService" />
         <activity android:name="com.silencedaemon.seta.Consultas.ServiceInformation" />
@@ -39,13 +44,9 @@
             android:theme="@style/AppTheme2"/>
         <activity android:name="com.silencedaemon.seta.GestionServicios.ServiceStateMain" />
         <activity android:name="com.silencedaemon.seta.Rutas.GenerarRuta" />
-        <activity android:name="com.silencedaemon.seta.MainMenus.MainMenuActivity"
+        <activity android:name="com.silencedaemon.seta.MainMenus.MainMenu.vista.MainMenuActivity"
             android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
         <activity android:name="com.silencedaemon.seta.Antiguos.ProgramEscaleraMain" />
         <activity android:name="com.silencedaemon.seta.Servicios.ProgramEscaleraSecond"

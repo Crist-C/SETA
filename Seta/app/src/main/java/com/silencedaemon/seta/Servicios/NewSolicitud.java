@@ -16,7 +16,7 @@ import android.widget.Toast;
 
 
 import com.silencedaemon.seta.Funciones.DataModel;
-import com.silencedaemon.seta.MainMenus.MainMenuActivity;
+import com.silencedaemon.seta.MainMenus.MainMenu.vista.MainMenuActivity;
 import com.silencedaemon.seta.ProgramFragments.InterfazActivityFragment;
 import com.silencedaemon.seta.ProgramFragments.PagerControler;
 import com.silencedaemon.seta.R;

@@ -20,7 +20,7 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
-import com.silencedaemon.seta.MainMenus.MainMenuActivity;
+import com.silencedaemon.seta.MainMenus.MainMenu.vista.MainMenuActivity;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -122,7 +122,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
 
     private void ValidateLogin(final String userName,final String passWord){
 
-        String URL = "https://mariansr.com/DBLogin.php?";
+        String URL = "https://setaapp.000webhostapp.com/DBLogin.php?"; // Anterior: https://mariansr.com/
 
         StringRequest stringRequest = new StringRequest(Request.Method.POST, URL, new Response.Listener<String>() {
             @Override
@@ -143,11 +143,11 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
                         PreferenceEditor.putString("IDENTIFICADOR",ResultadoLogin.getString("IDENTIFICADOR"));
                         PreferenceEditor.putString("NUMERO_ID",ResultadoLogin.getString("NUMERO_ID"));
                         PreferenceEditor.putString("NOMBRE_USUARIO",ResultadoLogin.getString("NOMBRE"));
-                        PreferenceEditor.putString("DOCUMENTO",ResultadoLogin.getString("DOCUMENTO"));
-                        PreferenceEditor.putString("CELULAR1",ResultadoLogin.getString("CELULAR1"));
+                        PreferenceEditor.putString("DOCUMENTO",ResultadoLogin.getString("NUMERO_DOCUMENTO"));
+                        PreferenceEditor.putString("CELULAR1",ResultadoLogin.getString("CELULAR1_CORP"));
                         PreferenceEditor.putString("CORREO",userName);
                         PreferenceEditor.putString("CARGO",ResultadoLogin.getString("CARGO"));
-                        PreferenceEditor.putString("AREA",ResultadoLogin.getString("AREA"));
+                        PreferenceEditor.putString("AREA",ResultadoLogin.getString("AREA_DEPARTAMENTO"));
 
                         if (Recordarme.isChecked()){
                             PreferenceEditor.putBoolean("RECORDARME", true);

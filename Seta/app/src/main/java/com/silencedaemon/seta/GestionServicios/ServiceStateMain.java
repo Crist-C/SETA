@@ -20,7 +20,7 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonArrayRequest;
 import com.android.volley.toolbox.Volley;
-import com.silencedaemon.seta.MainMenus.MainMenuActivity;
+import com.silencedaemon.seta.MainMenus.MainMenu.vista.MainMenuActivity;
 import com.silencedaemon.seta.R;
 import com.google.android.material.textfield.TextInputLayout;
 
@@ -50,7 +50,7 @@ public class ServiceStateMain extends AppCompatActivity implements AdapterView.O
     ArrayAdapter OTMsAdapter;
     int TotalDatos = 1;
 
-    String mURL = "https://mariansr.com/DBConsulta.php?OTService=";
+    String mURL = "https://setaapp.000webhostapp.com/DBConsulta.php?OTService="; // Anterior: https://mariansr.com/
 
 
     @Override

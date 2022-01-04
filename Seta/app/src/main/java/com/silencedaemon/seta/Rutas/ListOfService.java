@@ -9,7 +9,7 @@ import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ListView;
 
-import com.silencedaemon.seta.MainMenus.MainMenu.vista.MainMenuActivity;
+import com.silencedaemon.seta.MainMenu.vista.MainMenuActivity;
 import com.silencedaemon.seta.R;
 
 public class ListOfService extends AppCompatActivity {

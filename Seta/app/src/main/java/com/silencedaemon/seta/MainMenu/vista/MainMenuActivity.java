@@ -1,4 +1,4 @@
-package com.silencedaemon.seta.MainMenus.MainMenu.vista;
+package com.silencedaemon.seta.MainMenu.vista;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -11,8 +11,8 @@ import android.util.AttributeSet;
 import android.view.View;
 import android.widget.ImageButton;
 
-import com.silencedaemon.seta.MainMenus.MainMenu.MainMenuContract;
-import com.silencedaemon.seta.MainMenus.MainMenu.presenter.MainMenuPresenter;
+import com.silencedaemon.seta.MainMenu.presenter.*;
+import com.silencedaemon.seta.MainMenu.MainMenuContract;
 import com.silencedaemon.seta.R;
 
 

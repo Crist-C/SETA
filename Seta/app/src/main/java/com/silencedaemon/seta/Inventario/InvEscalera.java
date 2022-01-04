@@ -16,7 +16,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 import android.widget.ToggleButton;
 
-import com.silencedaemon.seta.MainMenus.MainMenu.vista.MainMenuActivity;
+import com.silencedaemon.seta.MainMenu.vista.MainMenuActivity;
 import com.silencedaemon.seta.R;
 import com.google.android.material.textfield.TextInputEditText;
 

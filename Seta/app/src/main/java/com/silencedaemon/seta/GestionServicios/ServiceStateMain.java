@@ -20,7 +20,7 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonArrayRequest;
 import com.android.volley.toolbox.Volley;
-import com.silencedaemon.seta.MainMenus.MainMenu.vista.MainMenuActivity;
+import com.silencedaemon.seta.MainMenu.vista.MainMenuActivity;
 import com.silencedaemon.seta.R;
 import com.google.android.material.textfield.TextInputLayout;
 

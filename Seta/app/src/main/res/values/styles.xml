@@ -120,7 +120,6 @@
         <item name="android:layout_gravity">center</item>
         <item name="android:scaleX">0.5</item>
         <item name="android:scaleY">0.5</item>
-        <item name="android:layout_marginBottom">8dp</item>
     </style>
 
     <style name="TextMainMenu">

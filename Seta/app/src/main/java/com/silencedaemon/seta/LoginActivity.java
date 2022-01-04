@@ -20,7 +20,7 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
-import com.silencedaemon.seta.MainMenus.MainMenu.vista.MainMenuActivity;
+import com.silencedaemon.seta.MainMenu.vista.MainMenuRV;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -50,7 +50,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         setContentView(R.layout.login);
 
         SharedPreferences sharedPreferences = getSharedPreferences("UserLoginPreferences", Context.MODE_PRIVATE);
-        IntentToMainMenu = new Intent(LoginActivity.this, MainMenuActivity.class);
+        IntentToMainMenu = new Intent(LoginActivity.this, MainMenuRV.class);
 
         UserName = (EditText) findViewById(R.id.username);
         Password = (EditText) findViewById(R.id.password);

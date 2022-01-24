@@ -8,6 +8,7 @@ public interface MainMenuContract {
 
     interface presenter{
         public void goToActivity(Class activityItem);
+
     }
 
 }

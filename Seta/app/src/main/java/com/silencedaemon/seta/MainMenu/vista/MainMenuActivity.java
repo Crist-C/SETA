@@ -11,9 +11,15 @@ import android.util.AttributeSet;
 import android.view.View;
 import android.widget.ImageButton;
 
+import com.silencedaemon.seta.Antiguos.ProgramEscaleraMain;
+import com.silencedaemon.seta.GestionServicios.ServiceStateMain;
+import com.silencedaemon.seta.Inventario.GestionInventario;
 import com.silencedaemon.seta.MainMenu.presenter.*;
 import com.silencedaemon.seta.MainMenu.MainMenuContract;
 import com.silencedaemon.seta.R;
+import com.silencedaemon.seta.Rutas.GenerarRuta;
+import com.silencedaemon.seta.Servicios.Mensajeria_Activity;
+import com.silencedaemon.seta.Servicios.NewSolicitud;
 
 
 public class MainMenuActivity extends AppCompatActivity implements MainMenuContract.view {
@@ -55,17 +61,17 @@ public class MainMenuActivity extends AppCompatActivity implements MainMenuContr
 
 
 
-        BotConsDisponibilidad.setOnClickListener(v -> { presenter.goToConsultarDisponibilidad(); });
+        BotConsDisponibilidad.setOnClickListener(v -> { presenter.goToActivity(ProgramEscaleraMain.class); });
 
-        BotNewSolicitud.setOnClickListener(v -> presenter.goToNuevaSolicitud());
+        BotNewSolicitud.setOnClickListener(v -> presenter.goToActivity(NewSolicitud.class));
 
-        BotGenerarRuta.setOnClickListener(v -> presenter.goToGenerarRuta());
+        BotGenerarRuta.setOnClickListener(v -> presenter.goToActivity(GenerarRuta.class));
 
-        BotActEstado.setOnClickListener(v -> presenter.goToActualizarEstado());
+        BotActEstado.setOnClickListener(v -> presenter.goToActivity(ServiceStateMain.class));
 
-        BotMensajeria.setOnClickListener(view -> presenter.goToMensajeria());
+        BotMensajeria.setOnClickListener(view -> presenter.goToActivity(Mensajeria_Activity.class));
 
-        BotConsInventario.setOnClickListener(view -> presenter.goToConsultarInventario());
+        BotConsInventario.setOnClickListener(view -> presenter.goToActivity(GestionInventario.class));
 
 
     }
